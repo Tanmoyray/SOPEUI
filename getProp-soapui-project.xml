@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="02e60022-a1fd-40bb-9bf1-052bc4538a64" activeEnvironment="Default" name="getProp" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="32412a21-3d5e-46e0-bbf3-b0301994308c" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com:8000" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com:8000</con:endpoint></con:endpoints><con:resource name="Getproducts" path="/getproducts/" id="6af0217b-cfd1-4536-8477-f5ddd10ffaf2"><con:settings/><con:parameters/><con:method name="Getproducts 1" id="3d48dd42-a3a1-40ee-b456-f2cb79e3650f" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="1a652adc-57c1-4ff8-b646-df38e3c11649" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com:8000</con:endpoint><con:request/><con:originalUri>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com/getproducts/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="8c8c3078-7661-403c-896c-3b82f8e6eff4" name="TS"><con:description>TestSuite generated for REST Service [http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com:8000]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1e2b2a5a-403c-4e03-921f-6ece17e1ee28" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Getproducts TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [Getproducts] located at [/getproducts/]</con:description><con:settings/><con:testStep type="groovy" name="Groovy Script" id="13613b82-88ab-46c1-90d1-713880092224"><con:settings/><con:config><script>
+import com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext
+import java.util.Enumeration;
+
+Properties prop = new Properties()
+File propFile = new File("C:\\Users\\tanmoyrayvst\\Documents\\RestAPITest\\testData.properties")
+propFile.withInputStream {
+    prop.load(it)
+    
+}
+//def dataCount= propFile.getProperty.length()
+//log.info count(prop.endpoint0)
+
+
+//dataCount =prop.getProperty('endpoint0')
+//dataCount=0
+
+
+Enumeration e = prop.propertyNames();
+
+    for (; e.hasMoreElements();) {
+      //log.info(e.nextElement());
+
+       getEndpointValue=prop.getProperty( e.nextElement())
+     
+	  setEndpoint= testRunner.testCase.testSteps['Request 1'].setPropertyValue('Endpoint',getEndpointValue)
+
+	  def addteststep=testRunner.testCase.testSteps['Request 1']
+	  def addstepcontext=new WsdlTestRunContext(addteststep)
+       addteststep.run(testRunner,addstepcontext)
+
+    }
+
+//for (node=0;node&lt;=dataCount;node++)
+//{
+//	  log.info getEndpointValue=prop.getProperty("endpoint" +node)
+//	  setEndpoint= testRunner.testCase.testSteps['Request 1'].setPropertyValue('Endpoint',getEndpointValue)
+////log.info	prop.endpoint
+//}
+//
+////def project = testRunner.testCase.testSuite.project
+////testRunner.runTestStep( project.testSuites['TS'].testCases['Getproducts TestCase'].testSteps['Request 1'] )
+////
+
+
+
+
+
+
+
+
+
+</script></con:config></con:testStep><con:testStep type="restrequest" name="Request 1" id="72b15bfb-aaaf-41cb-9db8-806fdb672623"><con:settings/><con:config service="http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com:8000" resourcePath="/getproducts/" methodName="Getproducts 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="1a652adc-57c1-4ff8-b646-df38e3c11649" mediaType="application/json" sslKeystore=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting></con:settings><con:encoding xsi:nil="true"/><con:endpoint>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com:8000</con:endpoint><con:request/><con:originalUri>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com/getproducts/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

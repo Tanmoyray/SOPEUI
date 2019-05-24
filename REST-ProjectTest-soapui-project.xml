@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0b31f8d5-6d1a-4f6b-85b2-e0d5142b6f38" activeEnvironment="Default" name="REST_ProjectTest" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="28d8ff7d-ab66-496a-be76-395e784fb242" wadlVersion="http://wadl.dev.java.net/2009/02" name="WSDL" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com:8000</con:endpoint></con:endpoints><con:resource name="getassets" path="/getassets" id="830a9ccd-2db1-4563-b222-3a67189a4887"><con:settings/><con:parameters/><con:method name="Method 1" id="e1ecae2e-1315-4c4e-8e60-48a3ae3204a1" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="75d0d7a1-6d0d-4769-8789-7eb73c6a6efc" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#endpoint}</con:endpoint><con:request/><con:originalUri>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com/getassets</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="{asset_id}" path="/asset/{asset_id}" id="7d75bd55-af66-4f64-add8-6357f858fe7c"><con:settings/><con:parameters><con:parameter><con:name>asset_id</con:name><con:value>asset_id</con:value><con:style>TEMPLATE</con:style><con:default>asset_id</con:default></con:parameter></con:parameters><con:method name="Method 1" id="b97f881e-398b-4cc6-829b-84f8c085112c" method="GET"><con:settings/><con:parameters/><con:request name="Request 1" id="eb71e4e7-77ef-4a4a-b836-461eb7d063f5" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>$(#Project#endpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="{product_id}" path="/getasset/{product_id}/" id="767b5d8d-4512-4549-9f1f-2b0a34013c8b"><con:settings/><con:parameters><con:parameter><con:name>product_id</con:name><con:value>product_id</con:value><con:style>TEMPLATE</con:style><con:default>product_id</con:default></con:parameter></con:parameters><con:method name="Method 1" id="75f84f6f-e41e-48de-83a4-800ebc74135c" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="941d840a-65ff-45cc-b1f4-04e5f11b855d" mediaType="application/json"><con:settings/><con:endpoint>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com:8000</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="getproducts" path="/getproducts/" id="6276a0f6-7c99-45c8-bfef-5659b7402f2e"><con:settings/><con:parameters/><con:method name="Method 1" id="cc9da081-8836-420a-94ca-02ffde7c24dd" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="8402c804-1b32-4710-ae2f-cfa716876624" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>$(#Project#endpoint}</con:endpoint><con:request/><con:originalUri>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com/getproducts/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="3cb3630d-628b-40b7-8b1d-9d6da5576926" name="WSDL_TestSuite"><con:description>TestSuite generated for REST Service [WSDL]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="0a990672-9446-41dd-9013-5731638b6c84" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getassets TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [getassets] located at [/getassets]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="3cf1e2e7-1c9f-4fc9-abbb-edf0774c0fef"><con:settings/><con:config service="WSDL" resourcePath="/getassets" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="75d0d7a1-6d0d-4769-8789-7eb73c6a6efc" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#endpoint}</con:endpoint><con:request/><con:originalUri>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com/getassets</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e342dca3-ef38-4da1-a60c-c5112abe3a56" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="{asset_id} TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [{asset_id}] located at [/asset/{asset_id}]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="21cceab7-eccb-4339-a551-93f766fc0e49"><con:settings/><con:config service="WSDL" resourcePath="/asset/{asset_id}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="eb71e4e7-77ef-4a4a-b836-461eb7d063f5" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>$(#Project#endpoint}</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="dcda4a92-9c0b-45b2-9f53-0b1c1eeca652" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="{product_id} TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [{product_id}] located at [/getasset/{product_id}/]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="07534f47-9d2e-4d8c-8b40-e1da24faa028"><con:settings/><con:config service="WSDL" resourcePath="/getasset/{product_id}/" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="941d840a-65ff-45cc-b1f4-04e5f11b855d" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>${#Project#endpoint}</con:endpoint><con:request/><con:originalUri>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com/getasset/84ef2690-b75f-40be-b3e2-f735218673c5/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="product_id" value="${#TestSuite#pid}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="d25564f3-0615-464a-8111-3d9636b5a5c3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getproducts TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [getproducts] located at [/getproducts/]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="1df08d23-b006-4b1e-8fe1-fd0479c21191"><con:settings/><con:config service="WSDL" resourcePath="/getproducts/" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="8402c804-1b32-4710-ae2f-cfa716876624" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com:8000</con:endpoint><con:request/><con:originalUri>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com/getproducts/</con:originalUri><con:assertion type="Simple Contains" id="921a693d-7e23-44df-8e26-876d86b05741" name="Contains"><con:configuration><token>AKM Butter 100gms</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="LoadModify" id="3eeec6c2-75db-4850-bc52-7b96b304bf16"><con:settings/><con:config><script>
+
+
+//*********************************************************************************
+
+//Open file
+def xml = new XmlSlurper().parse("C:\\Users\\tanmoyrayvst\\Documents\\REST-ProjectTest-soapui-project.xml")
+
+def prop_value= xml.properties.property.value
+xml.replaceNode { 
+    properties.property(name: "endpoint") {
+        property.value("************************************************************")
+        log.info property.value
+    }
+    
+}
+
+//xml.setAttribute("vlaue","*********************************************");
+//log.info xml.getElementsByTagName("properties")
+
+
+//log.info prop_value=="Test"
+
+
+
+//Save File
+//def writer = new FileWriter("C:\\Users\\tanmoyrayvst\\Documents\\REST-ProjectTest-soapui-project1.xml")
+
+
+//Here is the variable with which you assign a new value to the attribute
+
+//    string newValue = string.Empty 
+//    XmlDocument xmlDoc = new XmlDocument()
+//def xmlFile = new XmlSlurper().parse("C:\\Users\\tanmoyrayvst\\Documents\\REST-ProjectTest-soapui-project.xml")
+//    xmlDoc.Load(xmlFile);
+//
+//    XmlNode node = xmlDoc.SelectSingleNode("//con:properties/con:property/con:value");
+//    node.Attributes[0].Value = newValue;
+//
+//    xmlDoc.Save(xmlFile);
+
+
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="getProp" id="956f474f-72fd-4185-b004-8d5fb152daea"><con:settings/><con:config><script>//
+//Properties props = new Properties()
+//FileInputStream propsFile = new FileInputStream("C:\\Users\\tanmoyrayvst\\Documents\\RestAPITest\\getData.properties")
+//props.load(propsFile)
+//
+//log.info props.getProperty('endpoint')
+
+import groovy.json.JsonSlurper 
+log.info testRunner.Project.endpoint
+//def getProducts=testRunner.testCase.testSuite.testCases['getproducts TestCase'].testSteps['Request 1'].getPropertyValue("Response")
+//
+//def jsonl= new JsonSlurper().parseText(getProducts)</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="3eb1da51-77aa-487c-991c-8a0cd79b59f8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="script" searchProperties="true"><con:settings/><con:testStep type="groovy" name="GroovyScript" id="d5e1e9bf-b995-4c48-94eb-e76105012546"><con:settings/><con:config><script><![CDATA[import groovy.json.JsonSlurper 
+
+
+def getProducts=testRunner.testCase.testSuite.testCases['getproducts TestCase'].testSteps['Request 1'].getPropertyValue("Response")
+
+def jsonl= new JsonSlurper().parseText(getProducts)
+
+//log.info jsonl.size()
+//log.info jsonl[1].product_id
+ArrayList<String> a= new ArrayList<String>()
+for (node=0;node<jsonl.size();node++)
+	{
+		//log.info pname
+		String pname= jsonl[node].product_name
+		 a.add(pname)
+		String pid= jsonl[node].product_id
+		 a.add(pid)
+		 
+		//log.info jsonl[node].product_name
+		 //log.info al.add(pname)
+	}
+	
+log.info a
+log.info a.size()
+
+
+HashSet<String> hs= new HashSet<String>(a)
+//for (node=0;node<jsonl.size();node++)
+//	{
+//		//log.info pname
+//		String pname= jsonl[node].product_name
+//		 hs.add(pname)
+//		//log.info jsonl[node].product_name
+//		 //log.info al.add(pname)
+//	}
+
+log.info hs
+log.info hs.size()
+
+HashMap<String,String> hm= new HashMap<String,String>()
+for (node=0;node<jsonl.size();node++)
+	{
+		//log.info pname
+		String pname= jsonl[node].product_name
+		
+		String pid= jsonl[node].product_id
+		 hm.put(pid,pname)
+		 
+		//log.info jsonl[node].product_name
+		 //log.info al.add(pname)
+
+		
+	}
+log.info hm
+log.info hm.size()
+
+
+
+
+
+
+
+
+	
+	
+//testRunner.testCase.testSuite.setPropertyValue('pid',getpidof1)
+//
+//def getpid= testRunner.testCase.testSuite.getPropertyValue('pid')
+//
+
+
+
+]]></script></con:config></con:testStep><con:testStep type="properties" name="Properties" id="c2f94046-2e5d-46ff-bc19-c57b1c1d9bfe"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties/></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>pid</con:name><con:value>84ef2690-b75f-40be-b3e2-f735218673c5</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>endpoint</con:name><con:value>http://ec2-18-223-33-112.us-east-2.compute.amazonaws.com:8000</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
