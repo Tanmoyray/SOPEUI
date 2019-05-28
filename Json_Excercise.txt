@@ -1,0 +1,21 @@
+{organization:"demo company",
+
+offices:[
+{country:"India", Office:"New Delhi"},
+{country:"Malaysia", Office:"Kuala Lumpur"},
+{country:"US", Office:"New York"},
+{country:"India", Office:"Mumbai"},
+{country:"US", Office:"Dallas"},
+{country:"Malaysa", Office:"Langkawi"},
+{country:"India", Office:"Bangalore"}
+]
+
+}
+
+
+1. Give me the office count for India, Malaysia and US
+India: 3
+US: 2
+Malaysia: 2
+2. Please assert whether I have an office in Langkawi, Malaysia
+
